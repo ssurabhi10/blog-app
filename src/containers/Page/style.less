@@ -1,0 +1,53 @@
+.page-layout {
+  .ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+  }
+  .ant-layout-sider {
+    overflow-y: scroll;
+    .menu-options {
+      flex-grow: 1;
+    }
+  }
+
+  .ant-layout {
+    z-index: 1;
+    .ant-layout-header {
+      min-width: 300px;
+      display: flex;
+      padding: unset;
+      background: unset;
+      font-size: 22px;
+      font-weight: bold;
+      height: unset;
+      line-height: unset;
+
+      .trigger {
+        font-size: 18px;
+        line-height: 64px;
+        padding: 0 24px;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .trigger:hover {
+        color: #001529;
+      }
+      .header-title {
+        padding: 14px 0;
+      }
+    }
+
+    .ant-layout-content {
+      min-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .ant-layout-sider-collapsed {
+      flex: 0 0 0 !important;
+      min-width: unset !important;
+      width: 0 !important;
+    }
+  }
+}
